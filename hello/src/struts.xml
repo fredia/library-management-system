@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+   <package name="default" namespace="/" extends="struts-default">
+        <action name="login" class="com.fredia.action.login" method="excute">
+            <result name="query">/jsp/r_search.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+            <result name="manage">/jsp/m_reader.jsp</result>
+        </action>
+        <action name="query" class="com.fredia.action.querymain" method="auto">
+             <result name="query">/jsp/r_search.jsp</result>     
+        </action>
+        <action name="addreader" class="com.fredia.action.addreader" method="excute">
+           
+        </action>
+         
+        <action name="recordquery" class="com.fredia.action.recordquery" method="excute">
+            <result name="res">/jsp/r_record.jsp</result>     
+        </action>
+        <action name="nowquery" class="com.fredia.action.nowquery" method="excute">
+            <result name="res">/jsp/r_now.jsp</result>     
+        </action>
+  
+        
+        <action name="queryres" class="com.fredia.action.querymain" method="excute">
+             <result name="results">/jsp/zidong.jsp</result>     
+        </action>
+         <action name="zidong" class="com.fredia.action.zidong" method="display">
+             <result name="none">/jsp/zidong.jsp</result>
+        </action>
+       
+    </package>
+   <package name="main" namespace="/" extends="json-default">
+      <action name="getJSONResult" class="com.fredia.action.JSONDataAction">
+       	   <result type="json" />
+      </action>
+      <action name="jsonAjax" class="com.fredia.action.AjaxAction">  
+           <result type="json">   
+                  
+           </result>  
+        </action>  
+         <action name="bookjson" class="com.fredia.action.bookjson">  
+           <result type="json">   
+                  
+           </result>  
+        </action>  
+         <action name="allbookjson" class="com.fredia.action.allbookjson">  
+           <result type="json">   
+                  
+           </result>  
+        </action>
+        <action name="allreaderjson" class="com.fredia.action.allreaderjson">  
+           <result type="json">   
+                  
+           </result>  
+        </action>  
+        <action name="addbook" class="com.fredia.action.addbook" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+        <action name="updatebook" class="com.fredia.action.updatebook" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+         <action name="deletebook" class="com.fredia.action.deletebook" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+         <action name="addreader" class="com.fredia.action.addreader" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+        <action name="updatereader" class="com.fredia.action.updatereader" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+         <action name="deletereader" class="com.fredia.action.deletereader" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+         <action name="updatepass" class="com.fredia.action.updatepass" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+        <action name="borrow" class="com.fredia.action.borrow" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+         <action name="backbook" class="com.fredia.action.backbook" method="excute">
+            <result type="json">   
+                  
+           </result> 
+        </action>
+    </package>
+     <package name="mainn" namespace="/" extends="json-default">
+         <action name="bookxq" class="com.fredia.action.everybook">  
+           <result type="json">   
+                  
+           </result>  
+        </action>  
+    </package>
+</struts>
